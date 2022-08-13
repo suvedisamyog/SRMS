@@ -1,0 +1,62 @@
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+.orgname{
+    display:none;
+}
+
+.one{
+    width:0px;
+    height:inherit;
+    transition: width 0.5s;
+
+
+}
+.navigation{
+    width:100vw;
+}
+.two{
+    width:100vw;
+    background-color: white;
+    min-height: 100vh;
+    max-height: max-content;
+
+}
+#onee{
+    height:inherit;
+display:block;
+}
+.panel-center{
+    right:0;
+    left:0;
+}
+
+.showsidebar{
+    width:250px!important;
+     transition: width 1s;
+}
+@media only screen and (max-width: 745px) {
+    .navigation{
+        background-color:white!important;
+    }
+    .bf-info{
+        background: white;
+    }
+    .panel-center{
+        display:none;
+    }
+    .orgname{
+        display:block;
+    }
+    body{
+        overflow-x: auto;
+    }
+    html{
+        overflow-x: auto;
+
+    }
+  }
+
