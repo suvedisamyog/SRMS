@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,57 +9,44 @@
         body {
             background: #151320;
             color: white;
-
-
-
+            font-family: Arial, sans-serif;
         }
 
-        .center {
-
+        .image-container {
             text-align: center;
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin: 90px;
+            flex-wrap: wrap; 
+           align-items: center;
+           align-content: center;    
+   }
 
+        .image {
+            text-align: center;
+            margin: 20px;
         }
 
-
-        a {
+        h4 {
             text-decoration: none;
-            text-align: center;
             color: white;
-            padding: 10px;
-            width: auto;
             text-transform: uppercase;
             letter-spacing: 3px;
             font-weight: 900;
-            font-size: 900;
-            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
-
-            border-radius: 5px;
-            margin: 50px;
-
+            margin: 30px;
+            display: block;
         }
 
-
-
-
-        a:hover {
-            transform: scale(1.5);
-            background: rgb(216, 186, 186);
-            color: rgb(53, 43, 43);
-            border-radius: 100px;
-            box-shadow: 10px 10px 30px rgba(23, 15, 133, 0.5);
+        .image img {
+            width: 300px;
+            height: auto;
+            max-height: 200px;
+            border-radius: 10px;
+            border: 2px solid #333;
+            transition: transform 0.2s ease-in-out;
         }
 
-        h3,
-        h4 {
-            text-align: center;
-            text-transform: capitalize;
-            margin-top: 50px;
-            margin-bottom: 100px;
-
+        .image img:hover {
+            transform: scale(1.1);
         }
 
         .footer {
@@ -69,14 +55,13 @@
             right: 0;
             left: 0;
             margin: auto;
-            display: flex;
-            justify-content: center;
+            text-align: center;
         }
 
         h3 {
             animation: blink 2s linear infinite;
             word-spacing: 5px;
-
+            margin: 20px 0;
         }
 
         .typing {
@@ -90,20 +75,27 @@
             height: 100%;
             border-right: 2px solid white;
             animation: blink .3s linear infinite;
-
-
         }
-
+           p{
+            margin-bottom: 50px;
+            margin-top: 10px;
+           }
         @keyframes blink {
             0% {
                 visibility: hidden;
-
+            }
+            25%{
+                visibility: visible;
+                opacity: 0.1;
             }
 
             50% {
                 visibility: visible;
                 opacity: 0.2;
-
+            }
+            75% {
+                visibility: visible;
+                opacity: 0.3;
             }
 
             100% {
@@ -113,27 +105,36 @@
         }
     </style>
 </head>
-
 <body>
     <h3>
         <p>
-            welcome to student management system
+            <center>
+                 Welcome to the Student Record Management System
+        </center>
+        </p>
     </h3>
-    </p>
-    <div class="main">
-        <h4>login as:</h4>
+    <div class="image-container">
+        <div class="image">
+            <h4>Student</h4>
+            <a href="./students/students.php">
+                 <img src="./img/university-105709_1280.jpg" alt="Student">
+            </a>
+        </div>
+        <div class="image">
+            <h4>Admin</h4>
 
-        <div class="center">
-            <a href="./adminLogin.php">admin</a>
-            <a href="./students/students.php">student</a>
+            <a href="./adminLogin.php">
+                <img src="./img/bookkeeper-1016299_1280.jpg" alt="Admin">
+
+            </a>
         </div>
     </div>
     <div class="footer">
-        <p>Developed By <span class="typing"> samyog_subedi & diwas_kuwar</span> </p>
+        <p>Developed By <span class="typing">samyog_subedi</span></p>
     </div>
 
     <script>
-        const texts = ["Samyog_Subedi", "Diwas_Kuwar"];
+        const texts = ["Samyog_Subedi"];
         let count = 0;
         let index = 0;
         let currenttext = "";
@@ -150,10 +151,7 @@
                 index = 0;
             }
             setTimeout(type, 400);
-
         }());
-
     </script>
 </body>
-
 </html>
